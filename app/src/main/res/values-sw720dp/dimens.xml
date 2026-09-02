@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 10"+ large tablets: wider gutter for a comfortable reading width -->
+    <dimen name="screen_side_margin">120dp</dimen>
+</resources>

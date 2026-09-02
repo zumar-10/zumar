@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_card_rounded"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTxLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet funding"
+            android:textColor="@color/text_dark"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvTxTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today, 12:00 PM"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTxAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+₦0.00"
+        android:textColor="@color/green_primary"
+        android:textStyle="bold"
+        android:textSize="13.5sp" />
+
+</LinearLayout>

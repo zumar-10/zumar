@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green_pale">
+
+    <!-- Content area: only one of these is visible at a time -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ============ HOME TAB ============ -->
+        <ScrollView
+            android:id="@+id/tabHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="18dp">
+                    <FrameLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_logo_circle">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_zumar_z" />
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:text="Hi there"
+                        android:textColor="@color/text_dark"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_brand_gradient"
+                    android:padding="22dp"
+                    android:layout_marginBottom="18dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WALLET BALANCE"
+                        android:textColor="#CFEFD1"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08" />
+                    <TextView
+                        android:id="@+id/tvBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="₦0.00"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnFundAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_tile_rounded"
+                        android:text="Fund Wallet"
+                        android:textColor="@color/text_dark"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="18dp"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quick Buy"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <Button android:id="@+id/tileMtn" style="@style/NetworkTile" android:text="MTN" android:backgroundTint="@color/mtn_yellow" />
+                    <Button android:id="@+id/tileAirtel" style="@style/NetworkTile" android:text="Airtel" android:backgroundTint="@color/airtel_red" android:layout_marginStart="8dp" />
+                    <Button android:id="@+id/tileGlo" style="@style/NetworkTile" android:text="Glo" android:backgroundTint="@color/glo_green" android:layout_marginStart="8dp" />
+                    <Button android:id="@+id/tile9mobile" style="@style/NetworkTile" android:text="9mobile" android:backgroundTint="@color/ninemobile_teal" android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Recent Transactions"
+                        android:textColor="@color/text_dark"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tvSeeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all"
+                        android:textColor="@color/green_primary"
+                        android:textStyle="bold"
+                        android:textSize="12.5sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRecentTx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tvNoTxHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_rounded"
+                    android:padding="16dp"
+                    android:text="No transactions yet — fund your wallet to get started."
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ BUY DATA TAB ============ -->
+        <ScrollView
+            android:id="@+id/tabBuyData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Buy Data"
+                    android:textColor="@color/text_dark"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Choose a network to see available plans"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12.5sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <Button android:id="@+id/bdMtn" style="@style/NetworkTileBig" android:text="MTN" android:backgroundTint="@color/mtn_yellow" />
+                    <Button android:id="@+id/bdAirtel" style="@style/NetworkTileBig" android:text="Airtel" android:backgroundTint="@color/airtel_red" android:layout_marginStart="10dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/bdGlo" style="@style/NetworkTileBig" android:text="Glo" android:backgroundTint="@color/glo_green" />
+                    <Button android:id="@+id/bd9mobile" style="@style/NetworkTileBig" android:text="9mobile" android:backgroundTint="@color/ninemobile_teal" android:layout_marginStart="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ HISTORY TAB ============ -->
+        <ScrollView
+            android:id="@+id/tabHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="Transaction History"
+                    android:textColor="@color/text_dark"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/llHistoryList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tvNoTxHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_rounded"
+                    android:padding="16dp"
+                    android:text="Nothing here yet. Fund your wallet to see activity."
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ PROFILE TAB ============ -->
+        <ScrollView
+            android:id="@+id/tabProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="Profile"
+                    android:textColor="@color/text_dark"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/rowEditProfile" style="@style/ProfileRow" android:text="Edit profile" />
+                <TextView android:id="@+id/rowBeneficiaries" style="@style/ProfileRow" android:text="Saved beneficiaries" />
+                <TextView android:id="@+id/rowPin" style="@style/ProfileRow" android:text="Transaction PIN" />
+                <TextView android:id="@+id/rowNotifications" style="@style/ProfileRow" android:text="Notifications" />
+                <TextView android:id="@+id/rowSupport" style="@style/ProfileRow" android:text="Help &amp; support" />
+                <TextView
+                    android:id="@+id/rowLogout"
+                    style="@style/ProfileRow"
+                    android:text="Log out"
+                    android:textColor="@color/error_red" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <!-- ============ BOTTOM NAV ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <LinearLayout android:id="@+id/navHome" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_home" android:id="@+id/navHomeIcon" />
+            <TextView android:id="@+id/navHomeText" style="@style/NavLabel" android:text="Home" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navBuyData" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_cart" android:id="@+id/navBuyDataIcon" />
+            <TextView android:id="@+id/navBuyDataText" style="@style/NavLabel" android:text="Buy Data" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navHistory" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_history" android:id="@+id/navHistoryIcon" />
+            <TextView android:id="@+id/navHistoryText" style="@style/NavLabel" android:text="History" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProfile" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_person" android:id="@+id/navProfileIcon" />
+            <TextView android:id="@+id/navProfileText" style="@style/NavLabel" android:text="Profile" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

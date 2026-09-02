@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="640dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buy Data" android:textColor="@color/text_dark" android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Network" android:textColor="@color/text_muted" android:textSize="11.5sp" android:layout_marginBottom="6dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+        <Button android:id="@+id/dtNetMtn" style="@style/QuickBuyChip" android:text="MTN" android:backgroundTint="@color/mtn_yellow" />
+        <Button android:id="@+id/dtNetAirtel" style="@style/QuickBuyChip" android:text="Airtel" android:backgroundTint="@color/airtel_red" android:layout_marginStart="6dp" />
+        <Button android:id="@+id/dtNetGlo" style="@style/QuickBuyChip" android:text="Glo" android:backgroundTint="@color/glo_green" android:layout_marginStart="6dp" />
+        <Button android:id="@+id/dtNet9mobile" style="@style/QuickBuyChip" android:text="9mob" android:backgroundTint="@color/ninemobile_teal" android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <EditText android:id="@+id/dtPhone" style="@style/RegField" android:hint="Phone number" android:inputType="phone" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plan" android:textColor="@color/text_muted" android:textSize="11.5sp" android:layout_marginBottom="6dp" />
+    <LinearLayout android:id="@+id/dtPlan500mb" style="@style/PlanRow"><TextView style="@style/PlanLabel" android:text="500MB · 1 day" /><TextView style="@style/PlanPrice" android:text="₦150" /></LinearLayout>
+    <LinearLayout android:id="@+id/dtPlan15gb" style="@style/PlanRow"><TextView style="@style/PlanLabel" android:text="1.5GB · 7 days" /><TextView style="@style/PlanPrice" android:text="₦500" /></LinearLayout>
+    <LinearLayout android:id="@+id/dtPlan3gb" style="@style/PlanRow"><TextView style="@style/PlanLabel" android:text="3GB · 30 days" /><TextView style="@style/PlanPrice" android:text="₦1,000" /></LinearLayout>
+    <LinearLayout android:id="@+id/dtPlan10gb" style="@style/PlanRow" android:layout_marginBottom="14dp"><TextView style="@style/PlanLabel" android:text="10GB · 30 days" /><TextView style="@style/PlanPrice" android:text="₦3,000" /></LinearLayout>
+
+    <EditText android:id="@+id/dtPin" style="@style/RegField" android:hint="Transaction PIN" android:inputType="numberPassword" android:maxLength="4" />
+
+    <TextView android:id="@+id/dtError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/error_red" android:textSize="12sp" android:layout_marginBottom="8dp" android:visibility="gone" />
+
+    <Button android:id="@+id/btnPayData" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_button_primary" android:text="Pay" android:textColor="@color/white" android:textAllCaps="false" android:textStyle="bold" android:elevation="0dp" />
+</LinearLayout>
+</ScrollView>

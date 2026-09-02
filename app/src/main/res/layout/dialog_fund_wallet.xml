@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fund my account"
+        android:textColor="@color/text_dark"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="Enter any amount to add to your demo wallet"
+        android:textColor="@color/text_muted"
+        android:textSize="12.5sp" />
+
+    <EditText
+        android:id="@+id/etFundAmount"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="₦ Amount"
+        android:inputType="number"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="18dp" />
+
+    <Button
+        android:id="@+id/btnConfirmFund"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="Add to balance"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:elevation="0dp" />
+
+</LinearLayout>

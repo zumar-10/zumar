@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_pale">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintWidth_max="@dimen/content_max_width"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/register_title"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText android:id="@+id/etFirstName" style="@style/RegField" android:hint="First name" />
+            <EditText android:id="@+id/etMiddleName" style="@style/RegField" android:hint="Middle name (optional)" />
+            <EditText android:id="@+id/etLastName" style="@style/RegField" android:hint="Last name" />
+            <EditText android:id="@+id/etPhone" style="@style/RegField" android:hint="Phone number" android:inputType="phone" />
+            <EditText android:id="@+id/etEmail" style="@style/RegField" android:hint="Email address" android:inputType="textEmailAddress" />
+
+            <Spinner
+                android:id="@+id/spGender"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <EditText android:id="@+id/etDob" style="@style/RegField" android:hint="Date of birth (DD/MM/YYYY)" android:inputType="date" />
+            <EditText android:id="@+id/etAddress" style="@style/RegField" android:hint="Home address" />
+            <EditText android:id="@+id/etState" style="@style/RegField" android:hint="State of residence" />
+            <EditText android:id="@+id/etPassword" style="@style/RegField" android:hint="Create password" android:inputType="textPassword" />
+            <EditText android:id="@+id/etConfirmPassword" style="@style/RegField" android:hint="Confirm password" android:inputType="textPassword" />
+            <EditText android:id="@+id/etPin" style="@style/RegField" android:hint="4-digit transaction PIN" android:inputType="numberPassword" android:maxLength="4" />
+
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I agree to the Zumar Terms and Privacy Policy"
+                android:textColor="@color/text_muted"
+                android:textSize="12.5sp"
+                android:layout_marginBottom="16dp"
+                android:buttonTint="@color/green_primary" />
+
+            <TextView
+                android:id="@+id/tvRegisterError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/error_red"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="Create account"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:elevation="0dp" />
+
+            <TextView
+                android:id="@+id/tvGoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="12dp"
+                android:text="Already have an account? Log in"
+                android:textColor="@color/green_primary"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green_pale">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ============ HOME TAB ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_max="@dimen/content_max_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="18dp">
+                        <FrameLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:background="@drawable/bg_logo_circle">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_zumar_z" />
+                        </FrameLayout>
+                        <TextView
+                            android:id="@+id/tvGreeting"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:text="Hi there"
+                            android:textColor="@color/text_dark"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_brand_gradient"
+                        android:padding="22dp"
+                        android:layout_marginBottom="18dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WALLET BALANCE"
+                                android:textColor="#CFEFD1"
+                                android:textSize="11sp"
+                                android:letterSpacing="0.08" />
+                            <ImageView
+                                android:id="@+id/btnToggleBalance"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="6dp"
+                                android:src="@drawable/ic_eye"
+                                android:contentDescription="Show or hide balance" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="₦0.00"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/btnFundAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_tile_rounded"
+                            android:text="Fund Wallet"
+                            android:textColor="@color/text_dark"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="18dp"
+                            android:elevation="0dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="18dp">
+                        <LinearLayout
+                            android:id="@+id/actionAirtime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_card_rounded"
+                            android:padding="16dp"
+                            android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buy Airtime" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="13sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All networks" android:textColor="@color/text_muted" android:textSize="11sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/actionData"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_card_rounded"
+                            android:padding="16dp"
+                            android:layout_marginStart="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buy Data" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="13sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MTN, Glo, Airtel, 9mobile" android:textColor="@color/text_muted" android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quick Buy"
+                        android:textColor="@color/text_dark"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+                        <Button android:id="@+id/qbMtnAirtime" style="@style/QuickBuyChip" android:text="MTN ₦100" android:backgroundTint="@color/mtn_yellow" />
+                        <Button android:id="@+id/qbAirtelData" style="@style/QuickBuyChip" android:text="Airtel 1.5GB" android:backgroundTint="@color/airtel_red" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+                        <Button android:id="@+id/qbGloAirtime" style="@style/QuickBuyChip" android:text="Glo ₦200" android:backgroundTint="@color/glo_green" />
+                        <Button android:id="@+id/qb9mobileData" style="@style/QuickBuyChip" android:text="9mobile 500MB" android:backgroundTint="@color/ninemobile_teal" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Recent Transactions" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="14sp" />
+                        <TextView android:id="@+id/tvSeeAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="See all" android:textColor="@color/green_primary" android:textStyle="bold" android:textSize="12.5sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/llRecentTx" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/tvNoTxHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_card_rounded"
+                        android:padding="16dp"
+                        android:text="No transactions yet — fund your wallet to get started."
+                        android:textColor="@color/text_muted"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ BUY TAB (Airtime + Data) ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabBuy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_max="@dimen/content_max_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Buy Airtime &amp; Data" android:textColor="@color/text_dark" android:textSize="19sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="16dp" android:text="Choose a type, then a network" android:textColor="@color/text_muted" android:textSize="12.5sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_segmented"
+                        android:padding="4dp"
+                        android:layout_marginBottom="18dp">
+                        <Button
+                            android:id="@+id/segAirtime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_tile_rounded"
+                            android:text="Airtime"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textSize="12.5sp"
+                            android:textColor="@color/text_dark"
+                            android:elevation="0dp" />
+                        <Button
+                            android:id="@+id/segData"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:text="Data"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textSize="12.5sp"
+                            android:textColor="@color/text_muted"
+                            android:elevation="0dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <Button android:id="@+id/buyMtn" style="@style/NetworkTileBig" android:text="MTN" android:backgroundTint="@color/mtn_yellow" />
+                        <Button android:id="@+id/buyAirtel" style="@style/NetworkTileBig" android:text="Airtel" android:backgroundTint="@color/airtel_red" android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button android:id="@+id/buyGlo" style="@style/NetworkTileBig" android:text="Glo" android:backgroundTint="@color/glo_green" />
+                        <Button android:id="@+id/buy9mobile" style="@style/NetworkTileBig" android:text="9mobile" android:backgroundTint="@color/ninemobile_teal" android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ HISTORY TAB ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_max="@dimen/content_max_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="18dp" android:text="Transaction History" android:textColor="@color/text_dark" android:textSize="19sp" android:textStyle="bold" />
+                    <LinearLayout android:id="@+id/llHistoryList" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+                    <TextView
+                        android:id="@+id/tvNoTxHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_card_rounded"
+                        android:padding="16dp"
+                        android:text="Nothing here yet. Fund your wallet to see activity."
+                        android:textColor="@color/text_muted"
+                        android:textSize="12sp"
+                        android:gravity="center" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ PROFILE TAB ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_max="@dimen/content_max_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="18dp" android:text="Profile" android:textColor="@color/text_dark" android:textSize="19sp" android:textStyle="bold" />
+
+                    <TextView android:id="@+id/rowEditProfile" style="@style/ProfileRow" android:text="Edit profile" />
+                    <TextView android:id="@+id/rowBeneficiaries" style="@style/ProfileRow" android:text="Saved beneficiaries" />
+                    <TextView android:id="@+id/rowPin" style="@style/ProfileRow" android:text="Transaction PIN" />
+                    <TextView android:id="@+id/rowNotifications" style="@style/ProfileRow" android:text="Notifications" />
+                    <TextView android:id="@+id/rowSupport" style="@style/ProfileRow" android:text="Help &amp; support" />
+                    <TextView android:id="@+id/rowAbout" style="@style/ProfileRow" android:text="About Zumar" />
+                    <TextView android:id="@+id/rowLogout" style="@style/ProfileRow" android:text="Log out" android:textColor="@color/error_red" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <!-- ============ BOTTOM NAV ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <LinearLayout android:id="@+id/navHome" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_home" />
+            <TextView android:id="@+id/navHomeText" style="@style/NavLabel" android:text="Home" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navBuy" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_cart" />
+            <TextView android:id="@+id/navBuyText" style="@style/NavLabel" android:text="Buy" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navHistory" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_history" />
+            <TextView android:id="@+id/navHistoryText" style="@style/NavLabel" android:text="History" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navProfile" style="@style/NavItem">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_person" />
+            <TextView android:id="@+id/navProfileText" style="@style/NavLabel" android:text="Profile" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

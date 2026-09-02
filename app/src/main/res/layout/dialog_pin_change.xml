@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transaction PIN" android:textColor="@color/text_dark" android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+    <EditText android:id="@+id/pcCurrent" style="@style/RegField" android:hint="Current PIN" android:inputType="numberPassword" android:maxLength="4" />
+    <EditText android:id="@+id/pcNew" style="@style/RegField" android:hint="New PIN" android:inputType="numberPassword" android:maxLength="4" />
+    <EditText android:id="@+id/pcConfirm" style="@style/RegField" android:hint="Confirm new PIN" android:inputType="numberPassword" android:maxLength="4" />
+    <TextView android:id="@+id/pcError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/error_red" android:textSize="12sp" android:layout_marginBottom="8dp" android:visibility="gone" />
+    <Button android:id="@+id/btnUpdatePin" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_button_primary" android:text="Update PIN" android:textColor="@color/white" android:textAllCaps="false" android:textStyle="bold" android:elevation="0dp" />
+</LinearLayout>

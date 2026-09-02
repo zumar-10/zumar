@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zumar</string>
+    <string name="tagline">Fast recharge, made simple</string>
+    <string name="login_title">Welcome back</string>
+    <string name="login_sub">Log in to your account</string>
+    <string name="register_title">Create your account</string>
+    <string name="whatsapp_number">09166889556</string>
+    <string name="call_number">07060698438</string>
+</resources>

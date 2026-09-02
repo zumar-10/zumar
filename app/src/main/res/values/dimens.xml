@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Normal phones: no extra side gutter, content uses the full width -->
+    <dimen name="screen_side_margin">0dp</dimen>
+</resources>

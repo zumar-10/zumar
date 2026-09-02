@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_dark">#1B5E20</color>
+    <color name="green_primary">#2E7D32</color>
+    <color name="green_medium">#43A047</color>
+    <color name="green_light">#81C784</color>
+    <color name="green_pale">#E8F5E9</color>
+    <color name="lime_accent">#9CCC65</color>
+    <color name="whatsapp_green">#25D366</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#173218</color>
+    <color name="text_muted">#5C6B5E</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="card_border">#C8E6C9</color>
+    <color name="mtn_yellow">#FFC107</color>
+    <color name="airtel_red">#E53935</color>
+    <color name="glo_green">#2E7D32</color>
+    <color name="ninemobile_teal">#00897B</color>
+    <color name="otp_bg">#FFF8E1</color>
+    <color name="otp_border">#FFE0A3</color>
+    <color name="otp_text">#8A6D1D</color>
+    <color name="spend_color">#B45309</color>
+</resources>

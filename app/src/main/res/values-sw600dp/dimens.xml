@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 7"+ tablets: keep content from stretching edge to edge -->
+    <dimen name="screen_side_margin">56dp</dimen>
+</resources>

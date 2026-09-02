@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_pale"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <FrameLayout
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_logo_circle">
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_zumar_z" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="@string/login_title"
+            android:textColor="@color/text_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/login_sub"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tvLoginError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_red"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_button_primary"
+            android:text="Log in"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:elevation="0dp" />
+
+        <TextView
+            android:id="@+id/tvGoRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="New to Zumar? Create an account"
+            android:textColor="@color/green_primary"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

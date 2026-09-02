@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notifications" android:textColor="@color/text_dark" android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_input_field" android:padding="12dp" android:layout_marginBottom="8dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transaction alerts" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="12.5sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Funding, airtime &amp; data purchases" android:textColor="@color/text_muted" android:textSize="10.5sp" />
+        </LinearLayout>
+        <Switch android:id="@+id/swTransactionAlerts" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_input_field" android:padding="12dp" android:layout_marginBottom="8dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Promotions" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="12.5sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Offers and discounts from Zumar" android:textColor="@color/text_muted" android:textSize="10.5sp" />
+        </LinearLayout>
+        <Switch android:id="@+id/swPromotions" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_input_field" android:padding="12dp" android:layout_marginBottom="16dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Security alerts" android:textColor="@color/text_dark" android:textStyle="bold" android:textSize="12.5sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New logins and PIN changes" android:textColor="@color/text_muted" android:textSize="10.5sp" />
+        </LinearLayout>
+        <Switch android:id="@+id/swSecurityAlerts" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btnSaveNotifications" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_button_primary" android:text="Save preferences" android:textColor="@color/white" android:textAllCaps="false" android:textStyle="bold" android:elevation="0dp" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="620dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edit profile" android:textColor="@color/text_dark" android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+    <EditText android:id="@+id/epFirstName" style="@style/RegField" android:hint="First name" />
+    <EditText android:id="@+id/epMiddleName" style="@style/RegField" android:hint="Middle name" />
+    <EditText android:id="@+id/epLastName" style="@style/RegField" android:hint="Last name" />
+    <EditText android:id="@+id/epPhone" style="@style/RegField" android:hint="Phone number" />
+    <EditText android:id="@+id/epAddress" style="@style/RegField" android:hint="Home address" />
+    <EditText android:id="@+id/epState" style="@style/RegField" android:hint="State" />
+    <Button android:id="@+id/btnSaveProfile" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_button_primary" android:text="Save changes" android:textColor="@color/white" android:textAllCaps="false" android:textStyle="bold" android:elevation="0dp" />
+</LinearLayout>
+</ScrollView>

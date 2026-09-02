@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="600dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buy Airtime" android:textColor="@color/text_dark" android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Network" android:textColor="@color/text_muted" android:textSize="11.5sp" android:layout_marginBottom="6dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+        <Button android:id="@+id/atNetMtn" style="@style/QuickBuyChip" android:text="MTN" android:backgroundTint="@color/mtn_yellow" />
+        <Button android:id="@+id/atNetAirtel" style="@style/QuickBuyChip" android:text="Airtel" android:backgroundTint="@color/airtel_red" android:layout_marginStart="6dp" />
+        <Button android:id="@+id/atNetGlo" style="@style/QuickBuyChip" android:text="Glo" android:backgroundTint="@color/glo_green" android:layout_marginStart="6dp" />
+        <Button android:id="@+id/atNet9mobile" style="@style/QuickBuyChip" android:text="9mob" android:backgroundTint="@color/ninemobile_teal" android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <EditText android:id="@+id/atPhone" style="@style/RegField" android:hint="Phone number" android:inputType="phone" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount" android:textColor="@color/text_muted" android:textSize="11.5sp" android:layout_marginBottom="6dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+        <Button android:id="@+id/atAmt100" style="@style/AmountChip" android:text="₦100" />
+        <Button android:id="@+id/atAmt200" style="@style/AmountChip" android:text="₦200" android:layout_marginStart="6dp" />
+        <Button android:id="@+id/atAmt500" style="@style/AmountChip" android:text="₦500" android:layout_marginStart="6dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+        <Button android:id="@+id/atAmt1000" style="@style/AmountChip" android:text="₦1,000" />
+        <Button android:id="@+id/atAmt2000" style="@style/AmountChip" android:text="₦2,000" android:layout_marginStart="6dp" />
+        <Button android:id="@+id/atAmt5000" style="@style/AmountChip" android:text="₦5,000" android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <EditText android:id="@+id/atPin" style="@style/RegField" android:hint="Transaction PIN" android:inputType="numberPassword" android:maxLength="4" />
+
+    <TextView android:id="@+id/atError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/error_red" android:textSize="12sp" android:layout_marginBottom="8dp" android:visibility="gone" />
+
+    <Button android:id="@+id/btnPayAirtime" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_button_primary" android:text="Pay" android:textColor="@color/white" android:textAllCaps="false" android:textStyle="bold" android:elevation="0dp" />
+</LinearLayout>
+</ScrollView>
